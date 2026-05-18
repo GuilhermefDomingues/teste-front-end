@@ -1,0 +1,58 @@
+@use "../../../styles/variables" as *;
+
+.category-card {
+  border: none;
+  background: transparent;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+
+  cursor: pointer;
+
+  h3 {
+    margin: 0;
+    font-size: $font-sm;
+    color: $text-color;
+    font-weight: 500;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+
+  .card-box {
+    width: 160px;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $background-light;
+    border-radius: $radius-md;
+    box-shadow: $shadow-md;
+    transition: background-color 0.3s ease;
+  }
+
+  .icon {
+    font-size: 52px;
+    color: $text-color;
+    transition: color 0.3s ease;
+  }
+
+  &:hover,
+  &.active {
+    h3 {
+      color: $primary-color;
+      font-weight: 700;
+    }
+
+    .card-box {
+      background-color: $white;
+    }
+
+    .icon {
+      color: $primary-color;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@use "../../../styles/variables" as *;
+
+.product-header {
+  width: 100%;
+  margin-bottom: 24px;
+  text-align: center;
+
+  .product-header-title {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    span {
+      flex: 1;
+      height: 1px;
+      background-color: $border-color;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: $font-xl;
+      font-weight: 700;
+      color: $secondary-color;
+      white-space: nowrap;
+    }
+  }
+
+  button {
+    margin-top: 8px;
+    border: none;
+    background-color: transparent;
+
+    color: $text-dark;
+    font-size: $font-sm;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .product-header {
+    .product-header-title {
+      gap: 12px;
+
+      h2 {
+        font-size: $font-lg;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@use "../../styles/variables" as *;
+
+.brand-list {
+  width: 100%;
+  max-width: $container-width;
+  margin: 56px auto;
+  padding: 0 $container-padding;
+
+  text-align: center;
+
+  h2 {
+    margin-bottom: 32px;
+    font-size: $font-xl;
+    font-weight: 700;
+    color: $secondary-color;
+  }
+
+  .brands {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .brand-card {
+    width: 180px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: $radius-circle;
+    background-color: $white;
+    box-shadow: $shadow-lg;
+
+    img {
+      width: 95px;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .brand-list {
+    padding: 0 12px;
+
+    .brands {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand-card {
+      width: 130px;
+      height: 130px;
+    }
+  }
+}

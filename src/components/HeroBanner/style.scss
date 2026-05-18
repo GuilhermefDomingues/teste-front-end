@@ -1,0 +1,79 @@
+@use "../../styles/variables" as *;
+
+.hero {
+  width: 100%;
+  height: 390px;
+  padding: 0 81px;
+
+  display: flex;
+  align-items: center;
+
+  color: $white;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../../assets/HeroBanner.svg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .hero-content {
+    max-width: 600px;
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: $font-xxl;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: $font-xl;
+      font-weight: 400;
+
+      span {
+        color: $button-primary;
+        font-weight: 600;
+      }
+    }
+
+    button {
+      padding: 13px 54px;
+      border-radius: $radius-sm;
+      background-color: $button-primary;
+      color: $newsletter-background;
+      font-size: $font-sm;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .hero {
+    height: 320px;
+    padding: 0 24px;
+
+    .hero-content {
+      h1 {
+        font-size: $font-xl;
+      }
+
+      p {
+        font-size: $font-lg;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@use "../../styles/variables" as *;
+
+.header {
+  width: 100%;
+  padding-top: 20px;
+  border-bottom: 1px solid $background-light;
+  background-color: $white;
+
+  .header-content {
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 12px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    border: 1px solid $background-light;
+  }
+
+  .header-logo {
+    width: 139px;
+    height: auto;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .header {
+    .header-content {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .header {
+    padding-top: 12px;
+
+    .header-content {
+      padding: 12px;
+      gap: 16px;
+    }
+
+    .header-logo {
+      width: 120px;
+    }
+  }
+}

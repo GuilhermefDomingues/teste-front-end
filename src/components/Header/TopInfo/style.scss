@@ -1,0 +1,45 @@
+@use "../../../styles/variables" as *;
+
+.top-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 119px;
+  padding: 6px 12px;
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+
+    font-size: $font-xs;
+    color: $text-color;
+  }
+
+  span {
+    color: $primary-color;
+    font-weight: 700;
+  }
+
+  svg {
+    margin-right: 5px;
+    font-size: $font-md;
+    color: $text-color;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .top-info {
+    gap: 40px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .top-info {
+    gap: 16px;
+    padding: 8px 12px;
+    flex-wrap: wrap;
+  }
+}

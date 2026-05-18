@@ -1,0 +1,26 @@
+@use "../../styles/variables" as *;
+
+.category-section {
+  width: 100%;
+  max-width: $container-width;
+  margin: 39px auto;
+  padding: 0 $container-padding;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .category-section {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .category-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

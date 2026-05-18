@@ -1,0 +1,153 @@
+@use "../../styles/variables" as *;
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.product-modal {
+  position: relative;
+
+  width: 100%;
+  max-width: 720px;
+  padding: 32px;
+
+  display: flex;
+  align-items: center;
+  gap: 48px;
+
+  background-color: $white;
+  border-radius: $radius-sm;
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+
+  border: none;
+  background-color: transparent;
+
+  font-size: 22px;
+  color: $text-color;
+  cursor: pointer;
+}
+
+.modal-image {
+  width: 180px;
+  height: 220px;
+  object-fit: contain;
+}
+
+.modal-info {
+  flex: 1;
+
+  h2 {
+    margin-bottom: 8px;
+
+    font-size: $font-md;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $text-dark;
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 18px;
+
+    font-size: $font-md;
+    font-weight: 700;
+    color: $black;
+  }
+
+  p {
+    max-width: 330px;
+    margin-bottom: 8px;
+
+    font-size: $font-xs;
+    color: $text-light;
+    line-height: 1.5;
+  }
+
+  a {
+    display: block;
+    margin-bottom: 20px;
+
+    font-size: $font-xs;
+    font-weight: 600;
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantity {
+  width: 110px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  border: 1px solid $border-color;
+  border-radius: $radius-sm;
+
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: $font-md;
+  }
+
+  span {
+    font-size: $font-sm;
+    font-weight: 500;
+  }
+}
+
+.buy-button {
+  width: 180px;
+  height: 36px;
+
+  border: none;
+  border-radius: $radius-sm;
+
+  background-color: $button-primary;
+  color: $black;
+
+  font-size: $font-xs;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .product-modal {
+    max-width: 90%;
+    padding: 24px;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .modal-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .quantity,
+  .buy-button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,108 @@
+@use "../../styles/variables" as *;
+
+.newsletter {
+  width: 100%;
+  padding: 40px 0;
+  background-color: $newsletter-background;
+
+  .newsletter-content-wrapper {
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .newsletter-content {
+    color: $white;
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0;
+      max-width: 520px;
+      font-size: $font-sm;
+      line-height: 1.4;
+    }
+  }
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .form-fields {
+      display: flex;
+      gap: 8px;
+
+      input {
+        width: 220px;
+        height: 40px;
+        padding: 0 16px;
+
+        border: none;
+        border-radius: $radius-sm;
+        outline: none;
+
+        font-size: 13px;
+        font-family: $font-family-primary;
+      }
+
+      button {
+        width: 150px;
+        height: 40px;
+
+        border: none;
+        border-radius: $radius-sm;
+
+        background-color: $button-primary;
+        color: $black;
+
+        font-size: $font-xs;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      color: $white;
+      font-size: $font-xs;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .newsletter {
+    .newsletter-content-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 12px;
+    }
+
+    .newsletter-form {
+      width: 100%;
+
+      .form-fields {
+        flex-direction: column;
+
+        input,
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

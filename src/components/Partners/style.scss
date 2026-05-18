@@ -1,0 +1,85 @@
+@use "../../styles/variables" as *;
+
+.partners {
+  width: 100%;
+  max-width: $container-width;
+  margin: 40px auto;
+  padding: 0 $container-padding;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+
+  .partner-card {
+    position: relative;
+    height: 320px;
+    border-radius: $radius-lg;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.45);
+    }
+  }
+
+  .partner-content {
+    position: absolute;
+    left: 48px;
+    bottom: 48px;
+    z-index: 1;
+
+    color: $white;
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: $font-xl;
+      font-weight: 700;
+    }
+
+    p {
+      max-width: 220px;
+      margin: 0 0 24px;
+      font-size: $font-sm;
+      line-height: 1.4;
+    }
+
+    button {
+      width: 120px;
+      height: 40px;
+
+      border: none;
+      border-radius: $radius-sm;
+
+      background-color: $button-primary;
+      color: $black;
+
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .partners {
+    grid-template-columns: 1fr;
+
+    .partner-card {
+      height: 240px;
+    }
+
+    .partner-content {
+      left: 24px;
+      bottom: 32px;
+    }
+  }
+}
