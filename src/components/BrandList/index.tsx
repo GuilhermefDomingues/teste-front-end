@@ -1,6 +1,6 @@
 import "./style.scss";
 
-import Logo from "../../assets/logo.svg";
+import Logo from "../../assets/Logo.svg";
 
 function BrandList() {
   return (
